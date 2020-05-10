@@ -16,5 +16,5 @@ RSpec.configure do |config|
   end
 
   # Ignore focus tag on CI environments.
-  config.filter_run_when_matching focus: true if ENV['CI'].blank?
+  config.filter_run_when_matching focus: true if ENV['CI'].nil?
 end
