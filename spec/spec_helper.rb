@@ -1,6 +1,9 @@
 require 'bundler/setup'
 require 'as_range'
 
+require 'faker'
+require 'pry'
+
 RSpec.configure do |config|
   # Run tests in random order.
   config.order = 'random'
