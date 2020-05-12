@@ -8,15 +8,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Aliou Diallo']
   spec.email         = ['code@aliou.me']
 
-  spec.summary       = 'TODO: Write a short summary, because RubyGems requires one.'
-  spec.description   = 'TODO: Write a longer description or delete this line.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Quickly generate ranges from object methods.'
+  spec.description   = <<-DESCRIPTION
+    Quickly generate ranges from object methods or from procs.
+  DESCRIPTION
+  spec.homepage      = 'https://github.com/aliou/as_range'
   spec.license       = 'MIT'
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(bin|test|spec|features)/})
   end
 
   spec.bindir        = 'exe'
