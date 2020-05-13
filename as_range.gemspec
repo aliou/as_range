@@ -26,8 +26,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.5.0'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'faker'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'faker', '~> 2.0'
+  spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rspec-instafail'
+  spec.add_development_dependency 'rspec-instafail', '~> 1.0'
 end
