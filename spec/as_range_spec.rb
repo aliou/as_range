@@ -76,6 +76,7 @@ RSpec.describe AsRange do
         let(:start_attribute) { -> { value } }
 
         it 'uses the callback return value' do
+          instance.end_date = Faker::Date.forward
           range = instance.as_range
           expect(range.begin).to eq(value)
         end
@@ -86,6 +87,7 @@ RSpec.describe AsRange do
 
         it 'calls the sendable' do
           instance.start_value = value
+          instance.end_date = Faker::Date.forward
           range = instance.as_range
 
           expect(range.begin).to eq(value)
